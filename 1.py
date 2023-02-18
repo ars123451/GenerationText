@@ -24,7 +24,6 @@ for prev_char, char_stat in stat.items():
     stat_for_generation[prev_char] = []
     for chars, count in char_stat.items():
         totals[prev_char] += count
-        stat_for_generation[prev_char].append([count, char])
+        stat_for_generation[prev_char].append([count, chars])
     stat_for_generation[prev_char].sort()
-pprint(totals)
-pprint(stat_for_generation)
+    stat_for_generation[prev_char].reverse()
